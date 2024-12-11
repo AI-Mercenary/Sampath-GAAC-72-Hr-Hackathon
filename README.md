@@ -6,10 +6,10 @@
 - Name 2: 
 
 **Contact Information:**  
-- Email Address 1: sdatla394@gmail.com 
+- Email Address 1: [sdatla394@gmail.com] 
 
 **LinkedIn Profiles:**  
-- LinkedIn ID 1: https://www.linkedin.com/in/sampath-varma-datla
+- LinkedIn ID 1: [https://www.linkedin.com/in/sampath-varma-datla]
 - Email Address 2:
 
 **GitHub Connection:**  
@@ -59,3 +59,6 @@ Yes! One key takeaway from my previous hackathons is that **time management and 
 **How will you divide responsibilities during the hackathon?**  
 Since I’m participating solo, I’ll be handling everything from ideation to deployment. I will break down tasks into manageable steps and focus on delivering an innovative solution!  
 
+## Fun Fact  
+**What’s one fun fact about your team?**  
+My ML models might predict outcomes, but they still haven’t figured out how to prevent me from staying up all night awake 😅.
