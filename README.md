@@ -3,14 +3,15 @@
 ## Team Introduction  
 **Team Members:**  
 - Name 1: Sampath Varma Datla
-- Name 2: 
+- Name 2: SK Parthiv Pedapati
 
 **Contact Information:**  
-- Email Address 1: [sdatla394@gmail.com] 
+- Email Address 1: [sdatla394@gmail.com]
+- Email Address 2: [parthiv.sk.pedapati@gmail.com]
 
 **LinkedIn Profiles:**  
 - LinkedIn ID 1: [https://www.linkedin.com/in/sampath-varma-datla]
-- Email Address 2:
+- Email Address 2: [https://www.linkedin.com/in/parthiv-pedapati-7336b4311/]
 
 **GitHub Connection:**  
 - Yes
@@ -21,7 +22,7 @@
 
 ## Theme Selection  
 **What theme are you taking up, and why?**  
-I’m taking up the AI/ML theme, because I am passionate about using machine learning to solve real-world problems, especially in healthcare, robotics, education, defense, aerospace, and business. It’s a field that challenges me to continuously innovate and learn.  
+I’m taking up the AI/ML theme because I am passionate about using machine learning to solve real-world problems, especially in healthcare, robotics, education, defence, aerospace, and business. It’s a field that challenges me to innovate and learn continuously.  
 
 ## Goals and Learning  
 **What are you hoping to achieve or learn from this hackathon?**  
@@ -57,7 +58,7 @@ Yes! One key takeaway from my previous hackathons is that **time management and 
 
 ## Responsibilities  
 **How will you divide responsibilities during the hackathon?**  
-Since I’m participating solo, I’ll be handling everything from ideation to deployment. I will break down tasks into manageable steps and focus on delivering an innovative solution!  
+Since I’m participating solo, I’ll handle everything from ideation to deployment. I will break down tasks into manageable steps and focus on delivering an innovative solution!  
 
 ## Fun Fact  
 **What’s one fun fact about your team?**  
