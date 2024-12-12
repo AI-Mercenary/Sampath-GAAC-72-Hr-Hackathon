@@ -45,6 +45,10 @@ I’m taking up the AI/ML theme because I am passionate about using machine lear
   - Strong expertise in AI/ML and problem-solving.  
   - Experience in rapid model development and deployment.  
   - Detail-oriented and highly organized.
+- **Parthiv**
+   - Ready to learn, code and create
+   - Always up for a challenge
+   - I'm looking forward to making things perfectly perfect.
 
 ## Tools and Technologies  
 **What tools, frameworks, or technologies are you planning to use?**  
@@ -58,7 +62,8 @@ Yes! One key takeaway from my previous hackathons is that **time management and 
 
 ## Responsibilities  
 **How will you divide responsibilities during the hackathon?**  
-Since I’m participating solo, I’ll handle everything from ideation to deployment. I will break down tasks into manageable steps and focus on delivering an innovative solution!  
+**Parthiv:** I can take care of the logic interpretation using Python and CPP.
+**Sampath:** 
 
 ## Fun Fact  
 **What’s one fun fact about your team?**  
