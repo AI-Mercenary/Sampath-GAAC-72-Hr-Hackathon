@@ -46,6 +46,10 @@ This project addresses the problem of efficiently summarizing long-form videos (
 - Transformers (Hugging Face)
 - NumPy
 - Matplotlib
+- ReportLab
+- yt-dlp
+- PIL
+- Llama
 
 ---
 
@@ -92,5 +96,5 @@ This project addresses the problem of efficiently summarizing long-form videos (
 ## Contact
 For more information, feedback, or contributions, please contact the team through the provided GitHub or LinkedIn profiles. Thank you for your interest in the Video Summarization project.
 
-## Presention for the Project
+## Presentation for the Project
 [Team Members.pdf](https://github.com/user-attachments/files/18113747/Team.Members.pdf)
