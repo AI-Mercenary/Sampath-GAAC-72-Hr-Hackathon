@@ -1,0 +1,19 @@
+name: video_summarization_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - opencv
+  - moviepy
+  - transformers
+  - pytorch
+  - numpy
+  - pillow
+  - reportlab
+  - yt-dlp
+  - pip
+  - pip:
+    - torch
+    - torchvision
+    - torchaudio

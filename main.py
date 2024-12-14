@@ -4,6 +4,7 @@ from PIL import Image
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from transformers import pipeline
+import os
 
 def download_video(link, output_path):
     ydl_opts = {
@@ -22,6 +23,15 @@ def extract_video_metadata(link):
     title = info.get("title", "No title available")
     description = info.get("description", "No description available")
     return title, description
+
+def extract_keywords(title, description):
+    classifier = pipeline("feature-extraction", model="distilbert-base-uncased")
+    text = f"{title} {description}"
+    keywords = classifier(text)
+    keywords = [word for word in keywords if word.isalpha()]
+    with open("processed/keywords.txt", "w") as f:
+        f.write("\n".join(keywords))
+    print("Keywords extracted and saved to processed/keywords.txt")
 
 def process_video_stream(video_path):
     cap = cv2.VideoCapture(video_path)
@@ -70,9 +80,10 @@ def generate_pdf(summary, key_frames, output_pdf):
     print(f"PDF saved as {output_pdf}")
 
 def process_video(link, output_pdf):
-    video_path = "downloaded_video.mp4"
+    video_path = "raw/downloaded_video.mp4"
     download_video(link, video_path)
     title, description = extract_video_metadata(link)
+    extract_keywords(title, description)
     summary = generate_summary(title, description)
     frames = process_video_stream(video_path)
     if not frames:
@@ -80,6 +91,8 @@ def process_video(link, output_pdf):
         return
     generate_pdf(summary, frames, output_pdf)
 
-video_link = "https://www.youtube.com/watch?v=lGgIhxYuSHM"
-output_pdf_path = "C:\\Users\\sampa\\Desktop\\video_summary_report.pdf"
-process_video(video_link, output_pdf_path)
+if __name__ == "__main__":
+    video_link = "https://www.youtube.com/watch?v=lGgIhxYuSHM"
+    output_pdf_path = "processed/video_summary_report.pdf"
+    os.makedirs("processed", exist_ok=True)
+    process_video(video_link, output_pdf_path)
