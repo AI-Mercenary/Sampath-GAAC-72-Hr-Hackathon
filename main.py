@@ -64,7 +64,7 @@ def generate_pdf(summary, key_frames, output_pdf):
     y_position = 710
 
     for frame in key_frames:
-        frame_path = "frame_image.jpg"
+        frame_path = "processed/frame_image.jpg"
         Image.fromarray(frame).save(frame_path)
         c.drawImage(frame_path, 100, y_position, width=200, height=150)
         y_position -= 160
@@ -76,7 +76,7 @@ def generate_pdf(summary, key_frames, output_pdf):
     print(f"PDF saved as {output_pdf}")
 
 def process_video(link, output_pdf):
-    video_path = "raw/downloaded_video.mp4"
+    video_path = "./raw/downloaded_video.mp4"
     download_video(link, video_path)
     title, description = extract_video_metadata(link)
     extract_keywords(title, description)
@@ -90,6 +90,6 @@ def process_video(link, output_pdf):
 
 if __name__ == "__main__":
     video_link = "https://www.youtube.com/watch?v=lGgIhxYuSHM"
-    output_pdf_path = "processed/video_summary_report.pdf"
-    os.makedirs("processed", exist_ok=True)
+    output_pdf_path = "./processed/video_summary_report.pdf"
+    os.makedirs("./processed", exist_ok=True)
     process_video(video_link, output_pdf_path)

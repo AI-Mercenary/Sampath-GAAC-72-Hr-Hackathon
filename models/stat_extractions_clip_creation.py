@@ -43,8 +43,8 @@ def process_youtube_video(api_key, video_link):
         "suggested_videos": suggested_videos
     }
     
-    os.makedirs("processed", exist_ok=True)
-    save_clips_to_file(clips, "processed/clips.json")
+    os.makedirs("./processed", exist_ok=True)
+    save_clips_to_file(clips, "./processed/clips.json")
 
 if __name__ == "__main__":
     api_key = "YOUR_YOUTUBE_API_KEY"

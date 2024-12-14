@@ -1,23 +1,16 @@
-name: video_summarization_env
+name: model-env
 channels:
   - defaults
   - conda-forge
 dependencies:
-  - python=3.8
-  - opencv
-  - moviepy
-  - transformers
-  - pytorch
-  - numpy
-  - pillow
-  - reportlab
-  - yt-dlp
-  - librosa
+  - python=3.9
   - pip
   - pip:
-    - torch
-    - torchvision
-    - torchaudio
-    - llama-cpp-python
-    - google-api-python-client
-    - matplotlib
+      - torch
+      - transformers
+      - opencv-python-headless
+      - moviepy
+      - pillow
+      - reportlab
+      - yt-dlp
+      - google-api-python-client
