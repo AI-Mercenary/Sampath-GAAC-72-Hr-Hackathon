@@ -58,7 +58,7 @@ if __name__ == "__main__":
     video_path = 'raw/downloaded_video.mp4'
     title = "How to Wire Robots"
     process_audio_clips(video_path, aud_model_name, title)
-    process_video_frames(video_path, vid_model_name, title)
+    # process_video_frames(video_path, vid_model_name, title)
     print(video_frame_dict)
     print(audio_clip_dict)
     print("Data extraction complete.")
