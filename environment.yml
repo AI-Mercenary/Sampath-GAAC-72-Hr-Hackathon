@@ -19,3 +19,5 @@ dependencies:
     - torchvision
     - torchaudio
     - llama-cpp-python
+    - google-api-python-client
+    - matplotlib
