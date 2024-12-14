@@ -5,6 +5,8 @@ from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from transformers import pipeline
 import os
+from models.summurisation import generate_summary_from_audio
+from models.video_audio_extraction import process_audio_clips, process_video_frames #, audio_clip_dict
 
 def download_video(link, output_path):
     ydl_opts = {
@@ -54,12 +56,6 @@ def process_video_stream(video_path):
     print("Video processing completed.")
     return frames
 
-def generate_summary(title, description):
-    summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
-    input_text = f"Title: {title}\nDescription: {description}"
-    summary = summarizer(input_text, max_length=150, min_length=50, do_sample=False)
-    return summary[0]['summary_text']
-
 def generate_pdf(summary, key_frames, output_pdf):
     c = canvas.Canvas(output_pdf, pagesize=letter)
     c.setFont("Helvetica", 12)
@@ -84,7 +80,8 @@ def process_video(link, output_pdf):
     download_video(link, video_path)
     title, description = extract_video_metadata(link)
     extract_keywords(title, description)
-    summary = generate_summary(title, description)
+    process_audio_clips(video_path, "Qwen2-7B-LLM-F16", title)
+    summary = generate_summary_from_audio(title, description)
     frames = process_video_stream(video_path)
     if not frames:
         print("No frames captured from video.")
