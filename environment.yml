@@ -12,8 +12,10 @@ dependencies:
   - pillow
   - reportlab
   - yt-dlp
+  - librosa
   - pip
   - pip:
     - torch
     - torchvision
     - torchaudio
+    - llama-cpp-python
