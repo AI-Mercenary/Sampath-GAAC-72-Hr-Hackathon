@@ -38,22 +38,30 @@ def transcribe_audio_with_huggingface(audio_path):
     return transcription
 
 
-def generate_pdf_from_text(transcription, output_pdf_path):
-    print("Generating PDF...")
-    c = canvas.Canvas(output_pdf_path, pagesize=letter)
-    c.setFont("Helvetica", 12)
-    c.drawString(100, 750, "Audio Transcription Report")
-    text_lines = transcription.split('. ')
-    y_position = 720
-    for line in text_lines:
-        if y_position < 50:  
-            c.showPage()
-            c.setFont("Helvetica", 12)
-            y_position = 750
-        c.drawString(100, y_position, line.strip() + '.')
-        y_position -= 20
-    c.save()
-    print(f"PDF saved at {output_pdf_path}")
+def generate_text_file_from_transcription(transcription, output_text_path):
+    print("Generating text file...")
+    with open(output_text_path, 'w') as file:
+        file.write("Audio Transcription Report\n\n")
+        file.write(transcription)
+    print(f"Text file saved at {output_text_path}")
+
+
+# def generate_pdf_from_text(transcription, output_pdf_path):
+#     print("Generating PDF...")
+#     c = canvas.Canvas(output_pdf_path, pagesize=letter)
+#     c.setFont("Helvetica", 12)
+#     c.drawString(100, 750, "Audio Transcription Report")
+#     text_lines = transcription.split('. ')
+#     y_position = 720
+#     for line in text_lines:
+#         if y_position < 50:  
+#             c.showPage()
+#             c.setFont("Helvetica", 12)
+#             y_position = 750
+#         c.drawString(100, y_position, line.strip() + '.')
+#         y_position -= 20
+#     c.save()
+#     print(f"PDF saved at {output_pdf_path}")
 
 
 def process_youtube_link(link, audio_path, output_pdf_path):
