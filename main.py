@@ -6,7 +6,7 @@ from reportlab.pdfgen import canvas
 from transformers import pipeline
 import os
 from models.summurisation import generate_summary_from_audio
-from models.video_audio_extraction import process_audio_clips, process_video_frames #, audio_clip_dict
+from models.video_audio_extraction import process_youtube_link
 
 def download_video(link, output_path):
     ydl_opts = {
@@ -80,7 +80,7 @@ def process_video(link, output_pdf):
     download_video(link, video_path)
     title, description = extract_video_metadata(link)
     extract_keywords(title, description)
-    process_audio_clips(video_path, "Qwen2-7B-LLM-F16", title)
+    process_youtube_link(link, "./processed/audio_extracted.wav", output_pdf)
     summary = generate_summary_from_audio(title, description)
     frames = process_video_stream(video_path)
     if not frames:
